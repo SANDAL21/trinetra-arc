@@ -1,4 +1,5 @@
 "use client";
+import { imagePath } from "@/lib/imagePath";
 
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, MapPin, CheckCircle2 } from "lucide-react";
@@ -54,7 +55,7 @@ export function SummitPage() {
       {/* 1. HERO */}
       <section className="relative w-full min-h-[85vh] flex items-center bg-[#2C2C2C] text-[#FAF9F6] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/summit-roofing/hero.jpg" alt="Premium Modern Residential Home Roof" fill className="object-cover opacity-40 mix-blend-overlay" priority />
+          <Image src={imagePath("/images/summit-roofing/hero.jpg")} alt="Premium Modern Residential Home Roof" fill className="object-cover opacity-40 mix-blend-overlay" priority />
         </div>
         <div className="container mx-auto px-6 md:px-12 relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -102,7 +103,7 @@ export function SummitPage() {
           <div className="hidden md:block relative h-full min-h-[500px]">
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#D97736] rotate-3 opacity-10 rounded-sm"></div>
             <div className="absolute right-4 top-1/2 -translate-y-1/2 w-full h-[80%] bg-[#363636] shadow-2xl border border-white/5 overflow-hidden flex items-center justify-center relative">
-              <Image src="/images/summit-roofing/hero.jpg" alt="Roofing Project Detail" fill className="object-cover" />
+              <Image src={imagePath("/images/summit-roofing/hero.jpg")} alt="Roofing Project Detail" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -138,7 +139,7 @@ export function SummitPage() {
         <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-16 items-center">
           <div className="md:col-span-5 relative">
             <div className="aspect-[3/4] bg-[#363636] border border-white/10 flex items-center justify-center shadow-xl relative overflow-hidden">
-               <Image src="/images/summit-roofing/quality.jpg" alt="Quality Workmanship" fill className="object-cover" />
+               <Image src={imagePath("/images/summit-roofing/quality.jpg")} alt="Quality Workmanship" fill className="object-cover" />
             </div>
           </div>
           <div className="md:col-span-7">
@@ -169,9 +170,9 @@ export function SummitPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Modern Hill Country Residence", loc: "Westlake", img: "/images/summit-roofing/project1.jpg" },
-              { name: "East Austin Renovation", loc: "East Austin", img: "/images/summit-roofing/project2.jpg" },
-              { name: "Lakeway Residential Roof", loc: "Lakeway", img: "/images/summit-roofing/project3.jpg" }
+              { name: "Modern Hill Country Residence", loc: "Westlake", img: imagePath("/images/summit-roofing/project1.jpg") },
+              { name: "East Austin Renovation", loc: "East Austin", img: imagePath("/images/summit-roofing/project2.jpg") },
+              { name: "Lakeway Residential Roof", loc: "Lakeway", img: imagePath("/images/summit-roofing/project3.jpg") }
             ].map((proj, i) => (
               <div key={i} className="group">
                 <div className={`aspect-[4/3] bg-neutral-800 mb-6 overflow-hidden flex items-center justify-center relative`}>
@@ -217,7 +218,7 @@ export function SummitPage() {
       {/* 6. STORM DAMAGE / EMERGENCY CTA */}
       <section className="py-24 bg-[#D97736] text-white relative overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/summit-roofing/storm.jpg" alt="Storm Damage" fill className="object-cover opacity-30 mix-blend-multiply" />
+          <Image src={imagePath("/images/summit-roofing/storm.jpg")} alt="Storm Damage" fill className="object-cover opacity-30 mix-blend-multiply" />
         </div>
         <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
           <h2 className="text-3xl md:text-6xl font-bold tracking-tight mb-8">
@@ -249,7 +250,7 @@ export function SummitPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
-              <Image src="/images/summit-roofing/about.jpg" alt="Summit Roofing Team" fill className="object-cover" />
+              <Image src={imagePath("/images/summit-roofing/about.jpg")} alt="Summit Roofing Team" fill className="object-cover" />
             </div>
           </div>
         </div>

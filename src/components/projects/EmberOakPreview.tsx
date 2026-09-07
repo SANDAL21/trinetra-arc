@@ -1,3 +1,4 @@
+import { imagePath } from "@/lib/imagePath";
 import Image from "next/image";
 
 interface EmberOakPreviewProps {
@@ -22,7 +23,7 @@ export function EmberOakPreview({ containerClass = "m-6 md:m-12" }: EmberOakPrev
       {/* Mini Hero */}
       <div className="flex-1 relative flex flex-col items-center justify-center p-4 md:p-8 bg-[#0E0D0C] overflow-hidden">
         <div className="absolute inset-0 opacity-40">
-          <Image src="/images/ember-oak/hero.jpg" alt="Ember & Oak Preview" fill className="object-cover" sizes="(max-width: 768px) 50vw, 40vw" />
+          <Image src={imagePath("/images/ember-oak/hero.jpg")} alt="Ember & Oak Preview" fill className="object-cover" sizes="(max-width: 768px) 50vw, 40vw" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0E0D0C] via-[#0E0D0C]/40 to-transparent"></div>
         </div>
         

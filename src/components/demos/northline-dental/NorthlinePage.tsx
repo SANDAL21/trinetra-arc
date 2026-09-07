@@ -1,4 +1,5 @@
 "use client";
+import { imagePath } from "@/lib/imagePath";
 
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Menu, X, ArrowRight, MapPin } from "lucide-react";
@@ -128,7 +129,7 @@ export function NorthlinePage() {
                 initial={{ scale: 1.05 }} animate={{ scale: 1 }} transition={{ duration: 2, ease: "easeOut" }}
                 className="w-full h-full relative"
               >
-                <Image src="/images/northline-dental/hero.jpg" alt="Premium Clinic Interior" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 60vw" />
+                <Image src={imagePath("/images/northline-dental/hero.jpg")} alt="Premium Clinic Interior" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 60vw" />
               </motion.div>
             </div>
           </motion.div>
@@ -171,7 +172,7 @@ export function NorthlinePage() {
             style={{ y: clinicParallaxY }}
             className="w-full h-[140%] -top-[20%] relative"
           >
-            <Image src="/images/northline-dental/philosophy.jpg" alt="The Northline Experience" fill className="object-cover" sizes="100vw" />
+            <Image src={imagePath("/images/northline-dental/philosophy.jpg")} alt="The Northline Experience" fill className="object-cover" sizes="100vw" />
           </motion.div>
           <div className="absolute bottom-6 left-6 md:bottom-10 md:left-12 bg-white/95 backdrop-blur-md px-6 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-sm">
             <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#2C2E33]">The Northline Experience</span>
@@ -257,7 +258,7 @@ export function NorthlinePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.8 }} className="order-2 lg:order-1 relative aspect-[4/5] w-full max-w-2xl bg-[#EAE8E3] shadow-[0_30px_80px_rgba(0,0,0,0.06)] rounded-sm group overflow-hidden">
-                <Image src="/images/northline-dental/about.jpg" alt="Northline Practice" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 50vw" />
+                <Image src={imagePath("/images/northline-dental/about.jpg")} alt="Northline Practice" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 50vw" />
               </motion.div>
               
               <div className="order-1 lg:order-2 max-w-xl">
@@ -317,7 +318,7 @@ export function NorthlinePage() {
                   transition={{ duration: 1.5, ease: "easeOut" }}
                   className="w-[120%] h-[120%] relative mix-blend-multiply"
                 >
-                  <Image src="/images/northline-dental/3d-tech.jpg" alt="Abstract Modern 3D Technology Sculpture" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 60vw" />
+                  <Image src={imagePath("/images/northline-dental/3d-tech.jpg")} alt="Abstract Modern 3D Technology Sculpture" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 60vw" />
                 </motion.div>
               </div>
               
@@ -340,7 +341,7 @@ export function NorthlinePage() {
                 className="flex flex-col group"
               >
                 <div className="w-full aspect-[3/4] relative mb-6 overflow-hidden bg-[#EAE8E3] rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.05)] transform-style-3d">
-                  <Image src="/images/northline-dental/team-maya-carter.jpg" alt="Dr. Maya Carter" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={imagePath("/images/northline-dental/team-maya-carter.jpg")} alt="Dr. Maya Carter" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <h4 className="text-[clamp(1.25rem,2vw,1.75rem)] font-light tracking-tight mb-2 text-[#2C2E33]">Dr. Maya Carter</h4>
                 <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#7D8A82] mb-4">Lead Dentist</p>
@@ -352,7 +353,7 @@ export function NorthlinePage() {
                 className="flex flex-col md:mt-12 group"
               >
                 <div className="w-full aspect-[3/4] relative mb-6 overflow-hidden bg-[#EAE8E3] rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.05)] transform-style-3d">
-                  <Image src="/images/northline-dental/team-ethan-brooks.jpg" alt="Dr. Ethan Brooks" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={imagePath("/images/northline-dental/team-ethan-brooks.jpg")} alt="Dr. Ethan Brooks" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <h4 className="text-[clamp(1.25rem,2vw,1.75rem)] font-light tracking-tight mb-2 text-[#2C2E33]">Dr. Ethan Brooks</h4>
                 <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#7D8A82] mb-4">Cosmetic & Restorative</p>
@@ -364,7 +365,7 @@ export function NorthlinePage() {
                 className="flex flex-col md:mt-24 group"
               >
                 <div className="w-full aspect-[3/4] relative mb-6 overflow-hidden bg-[#EAE8E3] rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.05)] transform-style-3d">
-                  <Image src="/images/northline-dental/team-olivia-bennett.jpg" alt="Olivia Bennett" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={imagePath("/images/northline-dental/team-olivia-bennett.jpg")} alt="Olivia Bennett" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <h4 className="text-[clamp(1.25rem,2vw,1.75rem)] font-light tracking-tight mb-2 text-[#2C2E33]">Olivia Bennett</h4>
                 <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#7D8A82] mb-4">Patient Care Coordinator</p>

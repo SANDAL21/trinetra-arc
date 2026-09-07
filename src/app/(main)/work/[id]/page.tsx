@@ -1,3 +1,4 @@
+import { imagePath } from "@/lib/imagePath";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -109,37 +110,37 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
            {project.id === "01" ? (
              <>
                <div className="aspect-square relative bg-brand-charcoal overflow-hidden rounded-sm">
-                 <Image src="/images/summit-roofing/project1.jpg" alt="Summit Roofing Project Detail" fill className="object-cover opacity-80" />
+                 <Image src={imagePath("/images/summit-roofing/project1.jpg")} alt="Summit Roofing Project Detail" fill className="object-cover opacity-80" />
                </div>
                <div className="aspect-square relative bg-brand-charcoal overflow-hidden rounded-sm">
-                 <Image src="/images/summit-roofing/quality.jpg" alt="Summit Roofing Workmanship" fill className="object-cover opacity-80" />
+                 <Image src={imagePath("/images/summit-roofing/quality.jpg")} alt="Summit Roofing Workmanship" fill className="object-cover opacity-80" />
                </div>
              </>
            ) : project.id === "02" ? (
              <>
                <div className="aspect-square relative bg-brand-charcoal overflow-hidden rounded-2xl">
-                 <Image src="/images/northline-dental/hero.jpg" alt="Northline Dental Clinic" fill className="object-cover opacity-90" />
+                 <Image src={imagePath("/images/northline-dental/hero.jpg")} alt="Northline Dental Clinic" fill className="object-cover opacity-90" />
                </div>
                <div className="aspect-square relative bg-brand-charcoal overflow-hidden rounded-2xl">
-                 <Image src="/images/northline-dental/philosophy.jpg" alt="Northline Dental Philosophy" fill className="object-cover opacity-90" />
+                 <Image src={imagePath("/images/northline-dental/philosophy.jpg")} alt="Northline Dental Philosophy" fill className="object-cover opacity-90" />
                </div>
              </>
            ) : project.id === "03" ? (
              <>
                <div className="aspect-square relative bg-[#0E0D0C] overflow-hidden rounded-sm border border-white/5">
-                 <Image src="/images/ember-oak/food-ribeye.jpg" alt="Ember and Oak Culinary" fill className="object-cover opacity-90" />
+                 <Image src={imagePath("/images/ember-oak/food-ribeye.jpg")} alt="Ember and Oak Culinary" fill className="object-cover opacity-90" />
                </div>
                <div className="aspect-square relative bg-[#0E0D0C] overflow-hidden rounded-sm border border-white/5">
-                 <Image src="/images/ember-oak/interior.jpg" alt="Ember and Oak Interior" fill className="object-cover opacity-90" />
+                 <Image src={imagePath("/images/ember-oak/interior.jpg")} alt="Ember and Oak Interior" fill className="object-cover opacity-90" />
                </div>
              </>
            ) : project.id === "04" ? (
               <>
                 <div className="aspect-square relative bg-[#0A0A0A] overflow-hidden rounded-sm border border-white/5">
-                  <Image src="/images/apex-auto-haus/showcase-porsche.jpg" alt="Apex Auto Haus — Porsche 911 Detail" fill className="object-cover opacity-90" />
+                  <Image src={imagePath("/images/apex-auto-haus/showcase-porsche.jpg")} alt="Apex Auto Haus — Porsche 911 Detail" fill className="object-cover opacity-90" />
                 </div>
                 <div className="aspect-square relative bg-[#0A0A0A] overflow-hidden rounded-sm border border-white/5">
-                  <Image src="/images/apex-auto-haus/detail-work.jpg" alt="Apex Auto Haus — Detailing Craft" fill className="object-cover opacity-90" />
+                  <Image src={imagePath("/images/apex-auto-haus/detail-work.jpg")} alt="Apex Auto Haus — Detailing Craft" fill className="object-cover opacity-90" />
                 </div>
               </>
             ) : (

@@ -1,3 +1,4 @@
+import { imagePath } from "@/lib/imagePath";
 import Image from "next/image";
 
 interface NorthlinePreviewProps {
@@ -26,7 +27,7 @@ export function NorthlinePreview({ containerClass = "m-6 md:m-12" }: NorthlinePr
           <p className="text-[9px] md:text-sm font-light text-[#2C2E33]/60 max-w-[250px]">A healthier smile starts with a better experience.</p>
         </div>
         <div className="flex-[1.5] relative bg-[#EAE8E3] rounded-sm overflow-hidden shadow-inner flex items-center justify-center min-h-[120px] md:min-h-[160px]">
-          <Image src="/images/northline-dental/hero.jpg" alt="Northline Preview" fill className="object-cover" sizes="(max-width: 768px) 50vw, 40vw" />
+          <Image src={imagePath("/images/northline-dental/hero.jpg")} alt="Northline Preview" fill className="object-cover" sizes="(max-width: 768px) 50vw, 40vw" />
           <div className="absolute bottom-2 md:bottom-6 right-2 md:right-6 bg-white/80 backdrop-blur-md px-2 py-1 md:px-4 md:py-3 rounded-lg shadow-lg border border-white/60 flex items-center gap-1.5 md:gap-3">
             <span className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#7D8A82]"></span>
             <span className="text-[5px] md:text-[8px] font-semibold tracking-[0.2em] uppercase">Accepting Patients</span>

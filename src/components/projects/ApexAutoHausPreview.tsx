@@ -1,3 +1,4 @@
+import { imagePath } from "@/lib/imagePath";
 import Image from "next/image";
 
 interface ApexAutoHausPreviewProps {
@@ -22,8 +23,7 @@ export function ApexAutoHausPreview({ containerClass = "m-6 md:m-12" }: ApexAuto
 
       {/* Hero preview */}
       <div className="flex-1 relative overflow-hidden">
-        <Image
-          src="/images/apex-auto-haus/hero.jpg"
+        <Image src={imagePath("/images/apex-auto-haus/hero.jpg")}
           alt="Apex Auto Haus Preview"
           fill
           className="object-cover object-center"

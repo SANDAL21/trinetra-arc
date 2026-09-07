@@ -1,4 +1,5 @@
 "use client";
+import { imagePath } from "@/lib/imagePath";
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
@@ -59,7 +60,7 @@ const showcaseProjects = [
     vehicle: "Porsche 911 GT3",
     work: "Paint Correction + Ceramic Coating",
     finish: "Gloss Black",
-    image: "/images/apex-auto-haus/showcase-porsche.jpg",
+    image: imagePath("/images/apex-auto-haus/showcase-porsche.jpg"),
     duration: "3 Days",
     tag: "Porsche 911",
   },
@@ -68,7 +69,7 @@ const showcaseProjects = [
     vehicle: "Range Rover Autobiography",
     work: "Full Exterior + Interior Restoration",
     finish: "Graphite",
-    image: "/images/apex-auto-haus/showcase-suv.jpg",
+    image: imagePath("/images/apex-auto-haus/showcase-suv.jpg"),
     duration: "4 Days",
     tag: "Range Rover",
   },
@@ -77,7 +78,7 @@ const showcaseProjects = [
     vehicle: "BMW M4 Competition",
     work: "PPF + Premium Detail",
     finish: "Isle of Man Blue",
-    image: "/images/apex-auto-haus/showcase-bmw.jpg",
+    image: imagePath("/images/apex-auto-haus/showcase-bmw.jpg"),
     duration: "2 Days",
     tag: "BMW M4",
   },
@@ -86,7 +87,7 @@ const showcaseProjects = [
     vehicle: "Mercedes-AMG GT",
     work: "Premium Finish Restoration",
     finish: "Designo White",
-    image: "/images/apex-auto-haus/showcase-mercedes.jpg",
+    image: imagePath("/images/apex-auto-haus/showcase-mercedes.jpg"),
     duration: "3 Days",
     tag: "Mercedes-AMG",
   },
@@ -378,8 +379,7 @@ export function ApexAutoHausPage() {
       <section id="top" ref={heroRef} className="relative w-full h-screen min-h-[640px] flex items-end overflow-hidden">
         {/* Background image with parallax */}
         <motion.div style={{ y: heroY, scale: heroScale }} className="absolute inset-0 z-0">
-          <Image
-            src="/images/apex-auto-haus/hero.jpg"
+          <Image src={imagePath("/images/apex-auto-haus/hero.jpg")}
             alt="Apex Auto Haus — Premium Automotive Studio"
             fill
             className="object-cover object-center"
@@ -673,8 +673,7 @@ export function ApexAutoHausPage() {
           4. DETAIL WORK STRIP (visual break)
       ══════════════════════════════════════ */}
       <section className="relative h-[38vh] min-h-[260px] overflow-hidden z-10">
-        <Image
-          src="/images/apex-auto-haus/detail-work.jpg"
+        <Image src={imagePath("/images/apex-auto-haus/detail-work.jpg")}
           alt="Precision automotive detailing at Apex Auto Haus"
           fill
           className="object-cover object-center"
@@ -844,8 +843,7 @@ export function ApexAutoHausPage() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-6 relative aspect-[4/3] overflow-hidden bg-[#111111]"
             >
-              <Image
-                src="/images/apex-auto-haus/about.jpg"
+              <Image src={imagePath("/images/apex-auto-haus/about.jpg")}
                 alt="Apex Auto Haus Studio — Scottsdale, Arizona"
                 fill
                 className="object-cover hover:scale-[1.02] transition-transform duration-700"

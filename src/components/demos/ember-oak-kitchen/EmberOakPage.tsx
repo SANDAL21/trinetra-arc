@@ -1,4 +1,5 @@
 "use client";
+import { imagePath } from "@/lib/imagePath";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -307,7 +308,7 @@ export function EmberOakPage() {
       {/* Hero Section */}
       <section id="top" className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0 w-full h-[120%] -top-[10%]">
-          <Image src="/images/ember-oak/hero.jpg" alt="Ember & Oak Interior" fill className="object-cover" priority />
+          <Image src={imagePath("/images/ember-oak/hero.jpg")} alt="Ember & Oak Interior" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0E0D0C]/80 via-[#0E0D0C]/40 to-[#0E0D0C]"></div>
         </motion.div>
         
@@ -412,14 +413,14 @@ export function EmberOakPage() {
             {/* Menu Column 2 - Images */}
             <div className="space-y-8">
               <div className="aspect-[4/3] relative overflow-hidden rounded-sm">
-                <Image src="/images/ember-oak/food-ribeye.jpg" alt="Oak-Grilled Ribeye" fill className="object-cover hover:scale-105 transition-transform duration-1000" />
+                <Image src={imagePath("/images/ember-oak/food-ribeye.jpg")} alt="Oak-Grilled Ribeye" fill className="object-cover hover:scale-105 transition-transform duration-1000" />
               </div>
               <div className="grid grid-cols-2 gap-8">
                 <div className="aspect-square relative overflow-hidden rounded-sm">
-                  <Image src="/images/ember-oak/food-octopus.jpg" alt="Charred Octopus" fill className="object-cover hover:scale-105 transition-transform duration-1000" />
+                  <Image src={imagePath("/images/ember-oak/food-octopus.jpg")} alt="Charred Octopus" fill className="object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
                 <div className="aspect-square relative overflow-hidden rounded-sm">
-                  <Image src="/images/ember-oak/food-shrimp.jpg" alt="Lowcountry Shrimp" fill className="object-cover hover:scale-105 transition-transform duration-1000" />
+                  <Image src={imagePath("/images/ember-oak/food-shrimp.jpg")} alt="Lowcountry Shrimp" fill className="object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
               </div>
             </div>
@@ -438,7 +439,7 @@ export function EmberOakPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
             <div className="order-2 md:order-1 relative aspect-[3/4] md:aspect-[4/5] overflow-hidden rounded-sm">
-              <Image src="/images/ember-oak/fire.jpg" alt="Open Fire Cooking" fill className="object-cover" />
+              <Image src={imagePath("/images/ember-oak/fire.jpg")} alt="Open Fire Cooking" fill className="object-cover" />
             </div>
             <div className="order-1 md:order-2">
               <h3 className="text-xs tracking-[0.2em] uppercase text-[#A38D75] mb-4">Philosophy</h3>
@@ -467,14 +468,14 @@ export function EmberOakPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
             <div className="md:col-span-8 relative aspect-[16/9] md:aspect-auto md:h-[600px] overflow-hidden rounded-sm">
-              <Image src="/images/ember-oak/interior.jpg" alt="Ember & Oak Interior" fill className="object-cover" />
+              <Image src={imagePath("/images/ember-oak/interior.jpg")} alt="Ember & Oak Interior" fill className="object-cover" />
             </div>
             <div className="md:col-span-4 flex flex-col gap-6 md:gap-8">
               <div className="relative flex-1 min-h-[250px] overflow-hidden rounded-sm">
-                <Image src="/images/ember-oak/hero.jpg" alt="Restaurant Detail" fill className="object-cover" />
+                <Image src={imagePath("/images/ember-oak/hero.jpg")} alt="Restaurant Detail" fill className="object-cover" />
               </div>
               <div className="relative flex-1 min-h-[250px] overflow-hidden rounded-sm">
-                <Image src="/images/ember-oak/footer-cta.jpg" alt="Evening Atmosphere" fill className="object-cover" />
+                <Image src={imagePath("/images/ember-oak/footer-cta.jpg")} alt="Evening Atmosphere" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -496,7 +497,7 @@ export function EmberOakPage() {
               </p>
             </div>
             <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-              <Image src="/images/ember-oak/chef.jpg" alt="Chef Portrait" fill className="object-cover" />
+              <Image src={imagePath("/images/ember-oak/chef.jpg")} alt="Chef Portrait" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -507,7 +508,7 @@ export function EmberOakPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div className="order-2 lg:order-1 relative aspect-[4/3] lg:aspect-square overflow-hidden rounded-sm">
-              <Image src="/images/ember-oak/private-dining.jpg" alt="Private Dining Room" fill className="object-cover" />
+              <Image src={imagePath("/images/ember-oak/private-dining.jpg")} alt="Private Dining Room" fill className="object-cover" />
             </div>
             <div className="order-1 lg:order-2">
               <h3 className="text-xs tracking-[0.2em] uppercase text-[#A38D75] mb-4">Events</h3>
@@ -667,7 +668,7 @@ export function EmberOakPage() {
       {/* Final CTA */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/ember-oak/footer-cta.jpg" alt="Atmospheric Table" fill className="object-cover" />
+          <Image src={imagePath("/images/ember-oak/footer-cta.jpg")} alt="Atmospheric Table" fill className="object-cover" />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
