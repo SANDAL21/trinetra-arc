@@ -1,0 +1,15 @@
+// src/lib/supabase.ts
+// Public Supabase client - safe to use in browser (anon key only)
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseUrl  = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseAnon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+
+if (!supabaseUrl || !supabaseAnon) {
+  throw new Error(
+    "Missing Supabase environment variables. " +
+    "Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY in .env.local"
+  );
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnon);
