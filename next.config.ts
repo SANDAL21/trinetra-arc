@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/trinetra-arc-demo",
+  basePath: "/trinetra-arc",
   trailingSlash: true,
   images: {
     unoptimized: true,
