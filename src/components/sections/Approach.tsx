@@ -22,7 +22,7 @@ const columns = [
 
 export function Approach() {
   return (
-    <section className="py-24 md:py-32 bg-brand-white text-brand-black">
+    <section className="py-24 md:py-32 bg-brand-white text-brand-black light-section" data-theme="light">
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-20 text-center max-w-3xl mx-auto">
           <motion.h2 

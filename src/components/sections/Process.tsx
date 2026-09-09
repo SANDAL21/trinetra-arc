@@ -41,7 +41,8 @@ export function Process() {
   return (
     <section 
       ref={containerRef}
-      className="py-24 md:py-32 bg-brand-white text-brand-black relative"
+      className="py-24 md:py-32 bg-brand-white text-brand-black relative light-section"
+      data-theme="light"
     >
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-24 text-center">

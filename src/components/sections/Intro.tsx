@@ -9,7 +9,7 @@ export function Intro() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-32 md:py-48 bg-brand-white text-brand-black" id="intro">
+    <section className="py-32 md:py-48 bg-brand-white text-brand-black light-section" id="intro" data-theme="light">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center" ref={ref}>
           {/* Animated Trinetra Arc visual element */}
